@@ -1,0 +1,6 @@
+/* -- importing mixins will import the layout and colors -- */
+@import 'mixin';
+
+/* -- fonts -- */
+$font-default: var(--font-default);
+$font-alt: var(--font-default);

@@ -1,0 +1,61 @@
+@import '~/styles/theme';
+
+.header {
+  /* stick to the top */
+  position: absolute;
+  top: 0;
+  /* size */
+  width: 100%;
+  height: $height-header-fixed;
+  /* decoration */
+  background-color: transparent;
+  color: $color-white;
+  transition: height 0.3s ease;
+  /* add margins */
+  @include marginify();
+
+  & .content {
+    /* size */
+    height: 100%;
+    /* content-layout */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    /* default size */
+    height: 100%;
+  }
+
+  /* if sticking to the top  */
+  &.sticking {
+    position: fixed;
+    /* size */
+    height: $height-header-sticky;
+    /* decoration */
+    background-color: $color-white;
+    color: inherit;
+
+    animation: 0.3s slidein;
+
+    & .content {
+      height: 110px;
+    }
+  }
+}
+
+/* slide animation that will prevent overflow until complete */
+@keyframes slidein {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+  99%   {
+    height: $height-header-sticky;
+    overflow: hidden;
+  }
+  100%   {
+    height: $height-header-sticky;
+    overflow: visible;
+  }
+}

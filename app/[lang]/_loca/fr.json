@@ -1,0 +1,13 @@
+{
+  "Page.Home": {
+    "meta": {
+      "title": "Accueil",
+      "description": "Description de la page d'accueil"
+    },
+    "Welcome": "Bienvenue",
+    "Card": {
+      "Title": "Première page",
+      "Text": "Cliquez pour ouvrir la première page"
+    }
+  }
+}

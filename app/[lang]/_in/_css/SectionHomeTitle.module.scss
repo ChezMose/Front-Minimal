@@ -1,0 +1,22 @@
+@import '~/styles/theme';
+
+.sectionTitle {
+  position: relative;
+
+  & .title {
+    font-size: 3.6rem;
+    text-align: center;
+  }
+
+  & .back {
+    /* force image to the background */
+    z-index: 0;
+  }
+
+  & .content {
+    /* required for z-index */
+    position: relative;
+    /* force content on top of the image */
+    z-index: 1;
+  }
+}

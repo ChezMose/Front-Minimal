@@ -1,0 +1,13 @@
+{
+  "Page.Home": {
+      "meta": {
+      "title": "Home page",
+      "description": "This is the description of the Home page"
+    },
+    "Welcome": "Welcome",
+    "Card": {
+      "Title": "First page",
+      "Text": "Click to open the first page"
+    }
+  }
+}

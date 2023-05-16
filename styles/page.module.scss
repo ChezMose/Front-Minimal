@@ -1,0 +1,81 @@
+@import '~/styles/theme';
+
+/* page main container */
+.container {
+  /* make it a container */
+  position: relative;
+  /* size */
+  min-height: 100vh;
+  /* content-layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  /* add margins */
+  @include marginify();
+  /* leave space for the floating header */
+  margin-top: $height-header-fixed;
+}
+
+/* page background image */
+.back {
+  margin: 0;
+  /* position */
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  /* size */
+  width: 101vw !important;
+  height: auto !important;
+}
+
+.log {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #d8d8d8;
+  color: #2f2f2f;
+  padding: 3px 8px;
+  border-top-right-radius: 8px;
+}
+
+
+/* TO CLEANUP */
+
+.title a {
+  color: $color-link;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0 0 1rem;
+  line-height: 1.15;
+  font-size: 3.6rem;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

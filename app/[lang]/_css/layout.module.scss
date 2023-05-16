@@ -1,0 +1,6 @@
+@import '~/styles/theme';
+
+.header {
+  /* force header z-index to have it on top of any z-indexed image */
+  z-index: $zindex-header;
+}

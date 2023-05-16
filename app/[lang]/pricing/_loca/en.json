@@ -1,0 +1,9 @@
+{
+  "Page.Pricing": {
+    "meta": {
+      "title": "Pricing",
+      "description": "This is a pricing page"
+    },
+    "Default": "Pricing"
+  }
+}

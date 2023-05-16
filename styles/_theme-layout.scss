@@ -1,0 +1,41 @@
+/* -------------- LAYOUT -------------- */
+
+/* -- Margins -- */
+$margin-page-hz-xs: 0.5em;
+$margin-page-hz-sm: 1em;
+$margin-page-hz-md: 10%;
+$margin-page-hz-lg: 10%;
+$margin-page-hz-xl: 10%;
+
+/* -- Header -- */
+$height-header-fixed: 220px;
+$height-header-sticky: 110px;
+
+/* -- Footer -- */
+
+
+/* -- Z-index -- */
+$zindex-header: 100;
+$zindex-popup: 4000;
+
+/* -- Breaking points -- */
+$break-xs: 480px !default;
+$break-sm: 720px !default;
+$break-md: 960px !default;
+$break-lg: 1140px !default;
+$break-xl: 1400px !default;
+
+
+/* -------------- ELEMENTS -------------- */
+
+/* default controls */
+$height-control: 60px;
+$height-control-sm: 50px;
+
+/* -------------- DECORATION -------------- */
+
+/* global colors */
+$color-white: #fff;
+
+/* generic element colors */
+$color-link: #0070f3;

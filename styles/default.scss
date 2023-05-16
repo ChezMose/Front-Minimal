@@ -1,0 +1,68 @@
+/* ----------------------
+  Default CSS for all the site
+  Usage:
+  - normalize all styles cross-browser
+  - define global tool classes
+
+  Notes:
+  - avoid using 'font-family' in the html or body tag
+  as Next.js has a built-in optimization way of processing fonts
+ ---------------------- */
+
+/* ---------- LAYOUT ---------- */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-base);
+}
+* {
+  box-sizing: border-box;
+}
+/* ---------- ELEMENTS DECORATION ---------- */
+
+h1,
+h2 {
+  font-family: var(--font-alt);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+/* ---------- ELEMENTS RESET ---------- */
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* ---------- DEFAULT LAYOUT ---------- */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}

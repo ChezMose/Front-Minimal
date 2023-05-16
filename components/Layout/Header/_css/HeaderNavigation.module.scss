@@ -1,0 +1,59 @@
+@import '~/styles/theme';
+
+.navigation {
+  /* content-layout */
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1em;
+
+
+  & .nav {
+    /* decoration */
+    font-family: var(--font-menu);
+    font-size: 14px;
+    font-weight: 400;
+
+    & a {
+      padding: 1em;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  & .buttonPrimary {
+    /* content-layout */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    gap: 10px;
+    /* decoration */
+    background-color: $color-yellow;
+    color: $color-text-alt;
+    border-radius: 3px;
+    font-family: var(--font-menu);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  & .buttonSecondary {
+    /* content-layout */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    gap: 10px;
+    /* decoration */
+    border: 2px solid $color-white;
+    border-radius: 3px;
+    opacity: 0.7;
+    font-family: var(--font-menu);
+    font-size: 13px;
+    font-weight: 500;
+  }
+}

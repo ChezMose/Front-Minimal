@@ -1,0 +1,37 @@
+@import 'theme-layout';
+@import 'theme-color';
+
+
+/* --------------------------------
+  Add margins to the elements
+
+  Default: add page margins
+-------------------------------- */
+@mixin marginify($variant: page) {
+  /* global page margin */
+  @if ($variant == page) {
+    padding-left: $margin-page-hz-xs;
+    padding-right: $margin-page-hz-xs;
+    
+    /* on larger screen */
+    @media (min-width: $break-sm) {
+      padding-left: $margin-page-hz-sm;
+      padding-right: $margin-page-hz-sm;
+    }
+    /* on larger screen */
+    @media (min-width: $break-md) {
+      padding-left: $margin-page-hz-md;
+      padding-right: $margin-page-hz-md;
+    }
+    /* on larger screen */
+    @media (min-width: $break-lg) {
+      padding-left: $margin-page-hz-lg;
+      padding-right: $margin-page-hz-lg;
+    }
+    /* on larger screen */
+    @media (min-width: $break-xl) {
+      padding-left: $margin-page-hz-xl;
+      padding-right: $margin-page-hz-xl;
+    }
+  }
+}

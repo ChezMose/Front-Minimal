@@ -1,0 +1,231 @@
+{
+  "extends": "next/core-web-vitals",
+
+
+  "rules": {
+    /* -------------- BASIC SYNTAX  -------------- */
+    // allow CRLF as line-break
+    "linebreak-style": "off",
+    // let us have multiple matching cases for in a switch
+    "no-fallthrough": "off",
+    // force the operator to be on the newline when multilining
+    "operator-linebreak": [
+      "warn",
+      "before",
+      { "overrides": {
+        "=": "after",
+        "+=": "after",
+        "-=": "after"
+        } }],
+    // let us put comment without the extra space
+    "spaced-comment": "off",
+    // let us use concatenation (faster for most browser)
+    "prefer-template": "off",
+    // let or var make a warning, not an error
+    "prefer-const": "warn",
+    // trailing spaces make a warning, not an error
+    "no-trailing-spaces": ["warn"],
+    // extra blank lines make a warning, not an error
+    "no-multiple-empty-lines": ["warn", { "max": 2 }],
+    // arrow body issues make a warning, not an error
+    "arrow-body-style": ["warn"],
+    // multi space make a warning, not an error
+    "no-multi-spaces": ["warn"],
+    // space issues after keywords make a warning, not an error
+    "keyword-spacing": ["warn"],
+    // indentation issues
+    // imported from config-airbnb and adjusted
+    "indent": ["warn", 2, {
+      "SwitchCase": 1,
+      "VariableDeclarator": 1,
+      "outerIIFEBody": 1,
+      // MemberExpression: null,
+      "FunctionDeclaration": {
+        "parameters": 1,
+        "body": 1
+      },
+      "FunctionExpression": {
+        "parameters": 1,
+        "body": 1
+      },
+      "CallExpression": {
+        "arguments": 1
+      },
+      "ArrayExpression": 1,
+      "ObjectExpression": 1,
+      "ImportDeclaration": 1,
+      "flatTernaryExpressions": false,
+      "ignoredNodes": [
+        "ConditionalExpression ",
+        "JSXElement",
+        "JSXElement > *",
+        "JSXAttribute",
+        "JSXIdentifier",
+        "JSXNamespacedName",
+        "JSXMemberExpression",
+        "JSXSpreadAttribute",
+        "JSXExpressionContainer",
+        "JSXOpeningElement",
+        "JSXClosingElement",
+        "JSXText",
+        "JSXEmptyExpression",
+        "JSXSpreadChild"
+      ],
+      "ignoreComments": false
+    }],
+    // react-specifics indentation
+    "react/jsx-indent": ["warn", 2],
+    "react/jsx-indent-props": ["warn", 2],
+    
+    /* -------------- TOOLS  -------------- */
+    // allow usage of the console
+    "no-console": "off",
+    // end of line issues make a warning, not an error
+    "eol-last": "warn",
+
+    /* -------------- LAYOUT -------------- */
+    "padded-blocks": ["warn", {
+        "blocks": "never",
+        "classes": "never",
+        "switches": "never"
+      }, {
+        "allowSingleLineBlocks": true
+    }],
+    // empty block is a warning
+    "no-empty": "warn",
+    // for nicer try/catch and if/else
+    "brace-style": [
+      "warn",
+      "stroustrup",
+      { "allowSingleLine": true }
+    ],
+    // allow no-curly for the single condition if
+    "curly": [
+      "warn",
+      "multi-or-nest"
+    ],
+    // force line-break for if with single intruction
+    "nonblock-statement-body-position": [
+      "warn",
+      "below"
+    ],
+
+    /* -------------- VARS -------------- */
+    // warn when using a varat the wrong place
+    "vars-on-top": "warn",
+    // warn when using a var or let at the wrong place
+    "no-var": "warn",
+    // let us use local variable
+    "prefer-destructuring": "off",
+    // let us write long destructuring
+    "object-curly-newline": "off",
+    // spacing errors make a warning, not an error
+    "object-curly-spacing": ["warn", "always"],
+    // forgeting the shorthand make a warning, not an error
+    "object-shorthand": "warn",
+    // let us create global variables like window.__MY_GLOBAL__
+    "no-underscore-dangle": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        // do not check for unused parameters
+        "args": "none",
+        // let us import css silently
+        "varsIgnorePattern": "^style"
+      }
+    ],
+
+    /* -------------- FUNCTION -------------- */
+    // arrow function always needs parenthesis
+    "arrow-parens": [ "warn", "always" ],
+    // prevents mutating function parameters
+    "no-param-reassign": "error",
+    // allow trailing comma for the last element of a list
+    "comma-dangle": [ "warn", "only-multiline" ],
+    // let us close a paren on a new line
+    "function-paren-newline": "off",
+    // let us add a line-break when arrow function too long
+    "implicit-arrow-linebreak": "off",
+    // allow defaut params on any arg, not only the last one
+    "default-param-last": "off",
+
+
+    /* -------------- CLASS -------------- */
+    // let us write class method without explicit 'this'
+    "class-methods-use-this": "off",
+    // let us handle our classes line breaks
+    "lines-between-class-members": "off",
+
+
+    /* -------------- OPERATORS -------------- */
+    // allow usage of the ++ operator
+    "no-plusplus": "off",
+    // let us use bitwise operation (sometime to do better stuff, like integer divison)
+    "no-bitwise": "off",
+    // extra boolean cast as a warning, not an error
+    "no-extra-boolean-cast": "warn",
+    // operator spacing
+    "space-infix-ops": "warn",
+
+    /* -------------- IMPORT / REQUIRE -------------- */
+    // allow require() in a function/component
+    "global-require": "off",
+    // let us have a 'Shared' module
+    "import/no-extraneous-dependencies": "off",
+    // let us sort our imports like we want
+    "import/order": "off",
+    // let us export pure component or connected component using the same name
+    "import/no-named-as-default": "off",
+    // ignore resolution issues
+    "import/no-unresolved": "off",
+    // ignore extensions requirement
+    "import/extensions": "off",
+    // allow 
+    //"import/prefer-default-export": "off",
+
+    /* -------------- DOM -------------- */
+    "jsx-a11y/control-has-associated-label": [
+      "warn",
+      {
+        "ignoreElements": [
+          "audio",
+          "canvas",
+          "embed",
+          "input",
+          "label",
+          "textarea",
+          "tr",
+          "video"
+        ]
+      }
+    ],
+
+    /* -------------- REACT -------------- */
+    // let us use PropType.object as we are on the beginning of the project and components can change frequentyl
+    "react/forbid-prop-types": ["error", { "forbid": ["any", "array"]}],
+    // do not force default props on function a components (ES6 defaults can do the job)
+    "react/require-default-props": ["warn", { "ignoreFunctionalComponents": true}],
+    // let us use a variable for the button type
+    "react/button-has-type": "off",
+    // deprecated (and annoying)
+    "jsx-a11y/label-has-for": "off",
+    // annoying (and bugged)
+    "jsx-a11y/label-has-associated-control": "off",
+    // let us use 1-line component+children
+    "react/jsx-one-expression-per-line": "off",
+    // bracket closing make a warning, not an error
+    "react/jsx-closing-bracket-location": "warn",
+    // let us set the method in the order we want
+    "react/sort-comp": "off",
+    // let us use prop spreading (might reconsider that later)
+    "react/jsx-props-no-spreading": "off",
+    // curly brace around literal
+    "react/jsx-curly-brace-presence": ["warn", { "props": "never", "children": "ignore" }],
+    // curly on a newline
+    "react/jsx-curly-newline": "off",
+    // warn if closing tag is wrongly placed
+    "react/jsx-tag-spacing": "warn",
+    // allow components declared with an arrow function
+    "react/function-component-definition": "off"
+  }
+}

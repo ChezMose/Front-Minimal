@@ -1,0 +1,9 @@
+{
+  "Page.Pricing": {
+    "meta": {
+      "title": "Tarifs",
+      "description": "La page des tarifs"
+    },
+    "Default": "Tarifs"
+  }
+}

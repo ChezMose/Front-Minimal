@@ -1,0 +1,58 @@
+@import '~/styles/theme';
+
+$padding-vz: 8px;
+$padding-hz: 12px;
+
+.selectLang {
+  /* make it a container */
+  position: relative;
+
+  & .button {
+    /* clear all button styles */
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    /* add a padding for easier click */
+    padding: 1em 0 1em 1em;
+  }
+
+  & .dialog {
+    /* position */
+    position: absolute;
+    top: $padding-vz;
+    /* decoration */
+    color: $color-white;
+    background-color: #333;
+    border-radius: 8px;
+    /* content-layout */
+    & ul {
+      display: flex;
+      flex-flow: column;
+      align-items: stretch;
+
+      & a {
+        display: block;
+        padding: $padding-vz $padding-hz;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+/* slide animation that will prevent overflow until complete */
+@keyframes slidein {
+  0% {
+    height: 0;
+  }
+  99%   {
+    height: $height-header-sticky;
+  }
+  100%   {
+    height: $height-header-sticky;
+  }
+}
